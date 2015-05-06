@@ -31,6 +31,8 @@
 - (NSString*)cross;
 - (NSString*)div;
 
++ (void)newClassMethod;
+
 
 
 

@@ -9,5 +9,8 @@
 import UIKit
 
 class Calcutor: NSObject {
-   
+    var opand1:Double = 0.0;
+    //    var opand2:Double = 0.0;
+    //    var append:String = "";
+    
 }

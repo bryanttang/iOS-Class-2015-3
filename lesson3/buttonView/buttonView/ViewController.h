@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+{
+    UILabel *label1;
+
+}
 
 @end
 

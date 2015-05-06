@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
+{
+    NSArray *units;
 
+}
 @end
 

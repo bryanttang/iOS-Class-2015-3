@@ -21,7 +21,14 @@
     
     cal = [Calculator new];
     
-       
+    //NSLog(@"%@",     cal.weakVariable);
+    
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.3 green:0.1 blue:0.8 alpha:0.3];
+    //self.view.alpha = 0.2;
+    
+    
+    
 
     
 }

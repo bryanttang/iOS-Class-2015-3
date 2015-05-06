@@ -14,6 +14,7 @@
 		B5E231621AD55AE000467678 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E231611AD55AE000467678 /* Images.xcassets */; };
 		B5E231651AD55AE000467678 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E231631AD55AE000467678 /* LaunchScreen.xib */; };
 		B5E231711AD55AE000467678 /* helloTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E231701AD55AE000467678 /* helloTableViewTests.m */; };
+		B5E2317C1AD55BA500467678 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2317B1AD55BA500467678 /* MyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		B5E2316A1AD55AE000467678 /* helloTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = helloTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E2316F1AD55AE000467678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E231701AD55AE000467678 /* helloTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = helloTableViewTests.m; sourceTree = "<group>"; };
+		B5E2317A1AD55BA500467678 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		B5E2317B1AD55BA500467678 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				B5E231591AD55AE000467678 /* AppDelegate.m */,
 				B5E2315B1AD55AE000467678 /* ViewController.h */,
 				B5E2315C1AD55AE000467678 /* ViewController.m */,
+				B5E2317A1AD55BA500467678 /* MyTableViewController.h */,
+				B5E2317B1AD55BA500467678 /* MyTableViewController.m */,
 				B5E2315E1AD55AE000467678 /* Main.storyboard */,
 				B5E231611AD55AE000467678 /* Images.xcassets */,
 				B5E231631AD55AE000467678 /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				B5E2315D1AD55AE000467678 /* ViewController.m in Sources */,
 				B5E2315A1AD55AE000467678 /* AppDelegate.m in Sources */,
 				B5E231571AD55AE000467678 /* main.m in Sources */,
+				B5E2317C1AD55BA500467678 /* MyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

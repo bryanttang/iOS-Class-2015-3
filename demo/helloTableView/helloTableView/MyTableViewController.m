@@ -17,11 +17,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSDictionary *mail0 = @{@"name":@"bryant",
+                           @"description":@"This is bryant's email",
+                           @"tag":@"important"};
+    
+    NSDictionary *mail1 = @{@"name":@"Anne",
+                           @"description":@"This is bryant's email",
+                           @"tag":@"important"};
+    
+    NSDictionary *mail2 = @{@"name":@"Peter",
+                           @"description":@"This is bryant's email",
+                           @"tag":@"Unread"};
+    
+    email = @[mail0, mail1, mail2];
+    
+    
+    
+    
+    
+    
+    
+    _myTableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+    
+    
+    
+    contactDS_groupA = [NSMutableArray arrayWithArray:@[@"Janet",@"Bryant",@"Jessie",@"Alex"]];
+    contactDS_groupB = [NSMutableArray arrayWithArray:@[@"Peter",@"Michelle",@"James"]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,28 +53,96 @@
 }
 
 #pragma mark - Table view data source
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if ([indexPath section] == 0) {
+        return 80.0;
+    }
+    if (indexPath.section == 1) {
+        return 40.0;
+    }
+    return 80.0;
+    
+    
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
+    if (section == 0) {
+        return email.count;
+    }
+    if (section == 1) {
+        return contactDS_groupB.count;
+    }
+    
     return 0;
 }
 
-/*
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return @"Email";
+    }
+    if (section == 1) {
+        return @"Friends";
+    }
+    return nil;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSInteger section = [indexPath section];
+    NSInteger row = [indexPath row];
+
+    
+    UITableViewCell *cell;
+    
+    if (section == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cell_type_1" forIndexPath:indexPath];
+        
+        
+        NSDictionary *mail = [email objectAtIndex:row];
+        
+        cell.textLabel.text = [mail valueForKey:@"name"];
+        cell.detailTextLabel.text = [mail valueForKey:@"description"];
+        
+        
+        
+        
+        
+        
+        
+    }
+    if (section == 1) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cell_type_2" forIndexPath:indexPath];
+        cell.textLabel.text = [contactDS_groupB objectAtIndex:row];
+    }
+    
+    
     
     return cell;
 }
-*/
+
+
+#pragma mark - Delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if ([indexPath section] == 0) {
+        NSLog(@"%@", [contactDS_groupA objectAtIndex:indexPath.row]);
+    }
+    if (indexPath.section == 1) {
+         NSLog(@"%@", [contactDS_groupB objectAtIndex:indexPath.row]);
+    }
+    
+    
+    
+
+}
 
 /*
 // Override to support conditional editing of the table view.

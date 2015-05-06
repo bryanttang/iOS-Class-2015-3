@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface MyTableViewController : UITableViewController
-
+{
+    NSMutableArray *contactDS_groupA;
+    NSMutableArray *contactDS_groupB;
+    NSArray *email;
+    
+}
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @end

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +17,64 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYv-br-foj">
+                                <rect key="frame" x="157" y="59" width="287" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.043008588731550224" blue="0.4593642649253149" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="hWf-4N-ed5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMS-KL-Nan">
+                                <rect key="frame" x="0.0" y="162" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.58377319418405094" green="0.41638037448428866" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgG-tV-iTt">
+                                <rect key="frame" x="300" y="162" width="300" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.73680306164385279" blue="0.38908005649657851" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cac-N9-sne">
+                                <rect key="frame" x="0.0" y="338" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.70711978666598763" green="1" blue="0.15549427325718912" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cgG-tV-iTt" secondAttribute="trailing" constant="-16" id="2Wf-H9-cc3"/>
+                            <constraint firstItem="cgG-tV-iTt" firstAttribute="top" secondItem="sMS-KL-Nan" secondAttribute="top" id="3Qf-c2-GTf"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cac-N9-sne" secondAttribute="bottom" constant="62" id="9Sp-rZ-ZYe"/>
+                            <constraint firstAttribute="width" secondItem="cac-N9-sne" secondAttribute="width" id="BUK-vC-kwv"/>
+                            <constraint firstAttribute="height" secondItem="cac-N9-sne" secondAttribute="height" multiplier="3:1" id="CJb-uR-hvv"/>
+                            <constraint firstItem="cgG-tV-iTt" firstAttribute="leading" secondItem="sMS-KL-Nan" secondAttribute="trailing" id="Jnl-ZU-cK8"/>
+                            <constraint firstItem="sMS-KL-Nan" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="1:2" id="LZE-66-aHv"/>
+                            <constraint firstItem="cgG-tV-iTt" firstAttribute="width" secondItem="sMS-KL-Nan" secondAttribute="width" id="Ltj-bR-oRb"/>
+                            <constraint firstItem="TYv-br-foj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="39" id="R5N-cM-5NP"/>
+                            <constraint firstAttribute="centerX" secondItem="TYv-br-foj" secondAttribute="centerX" id="gN1-oo-kOP"/>
+                            <constraint firstItem="sMS-KL-Nan" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="142" id="kA7-DZ-0eF"/>
+                            <constraint firstItem="sMS-KL-Nan" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="tQK-KM-JtA"/>
+                            <constraint firstItem="cac-N9-sne" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="uAP-kC-Etp"/>
+                            <constraint firstItem="TYv-br-foj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="263" id="yIr-PX-Srs"/>
+                            <constraint firstItem="cgG-tV-iTt" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="1:2" id="zWz-Ri-SUs"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="yIr-PX-Srs"/>
+                                <exclude reference="Ltj-bR-oRb"/>
+                                <exclude reference="zWz-Ri-SUs"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

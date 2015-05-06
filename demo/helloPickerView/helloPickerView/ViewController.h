@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+{
+    NSMutableArray *options;
+}
+@property (strong, nonatomic) IBOutlet UITextField *additionOption;
+@property (strong, nonatomic) IBOutlet UILabel *showLabel;
+@property (strong, nonatomic) IBOutlet UIPickerView *optionPickView;
 
 
 @end
